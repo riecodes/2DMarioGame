@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.dmariogame.YouWinController">
+    <children>
+        <Label fx:id="winLabel" text="You Win!" />
+        <Button fx:id="restartButton" text="Restart" onAction="#handleRestart" />
+        <Button fx:id="menuButton" text="Menu" onAction="#handleMenu" />
+    </children>
+</VBox> 

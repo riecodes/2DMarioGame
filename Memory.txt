@@ -1,0 +1,198 @@
+# Comprehensive Analysis Plan for 2DMARIOGAME (JavaFX, Maven, FXML, NetBeans 25)
+
+## 1. Project Overview & Goals
+- **Objective:**  
+  Develop a 2D Mario-style platformer game using JavaFX (FXML for UI), following OOP and EDP principles, with persistent data storage, robust error handling, and a user-friendly, interactive GUI.
+- **Target Platform:**  
+  Desktop (Windows, cross-platform via Java)
+- **Development Environment:**  
+  Apache NetBeans 25, Maven project structure
+
+---
+
+## 2. System Architecture
+
+### 2.1. High-Level Structure
+- **MVC Pattern:**  
+  - **Model:** Game logic, player stats, level data, file handling
+  - **View:** FXML-based UI, JavaFX scenes, sprites, animations
+  - **Controller:** Event handling, user input, game state transitions
+
+### 2.2. Class Design (OOP)
+- **Core Classes:**  
+  - `GameEngine` (main loop, state management)
+  - `Player` (inherits from `Entity`, encapsulates movement, stats)
+  - `Enemy` (inherits from `Entity`, polymorphic behavior)
+  - `Entity` (base class for all game objects)
+  - `Level` (loads and manages level data)
+  - `FileManager` (handles save/load, serialization)
+  - `GameController` (JavaFX controller, event listeners)
+  - `UIManager` (manages menus, HUD, settings)
+- **OOP Principles:**  
+  - **Encapsulation:** Private fields, public getters/setters
+  - **Inheritance:** `Player`/`Enemy`/`Item` inherit from `Entity`
+  - **Polymorphism:** Overridable methods for movement, collision, etc.
+  - **Abstraction:** Abstract base classes/interfaces for extensibility
+
+---
+
+## 3. Graphical User Interface (GUI) Design
+
+### 3.1. FXML Structure
+- **FXML Files:**  
+  - `MainMenu.fxml` (start, load, settings)
+  - `GameScreen.fxml` (gameplay, HUD)
+  - `Settings.fxml` (audio, controls)
+  - `GameOver.fxml` (score, retry/exit)
+- **JavaFX Components:**  
+  - `Pane`, `Canvas` for rendering game
+  - `Button`, `Label`, `TextField` for UI
+  - `ImageView` for sprites
+
+### 3.2. User Experience
+- **Navigation:**  
+  - Main menu with clear options (Start, Load, Settings, Exit)
+  - In-game pause menu
+  - Game over and victory screens
+- **Accessibility:**  
+  - Keyboard navigation, tooltips, clear instructions
+- **Visual Feedback:**  
+  - Animations for actions, transitions, and feedback (e.g., coin collection, damage)
+
+## UI/UX Update
+- The Settings screen will be a simple menu (not omitted, but minimal functionality).
+- The Game Over screen will appear only when the player touches an enemy.
+- Reaching the flag will show a 'You Win' screen instead of Game Over.
+
+---
+
+## 4. Event-Driven Programming (EDP)
+
+### 4.1. Event Handling
+- **User Input:**  
+  - Keyboard events for movement/jump (KeyListener/JavaFX equivalents)
+  - Mouse events for menu navigation
+- **Game Events:**  
+  - Collision detection (player-enemy, player-item)
+  - Level completion, player death, score updates
+- **UI Events:**  
+  - Button clicks (start, pause, settings)
+  - Form submissions (settings, high scores)
+
+### 4.2. Event Listeners
+- Use JavaFX event handlers (`setOnAction`, `setOnKeyPressed`, etc.)
+- Decouple event logic from UI for testability
+
+---
+
+## 5. File Handling & Data Persistence
+
+### 5.1. Data to Persist
+- Player progress (levels completed, scores)
+- Settings (audio, controls)
+- High scores
+
+### 5.2. Implementation
+- **File Types:**  
+  - Use text files (CSV/JSON) or Java serialization for save data
+- **Classes:**  
+  - `FileManager` for reading/writing data
+  - Use `FileReader`, `FileWriter`, `BufferedReader`, `BufferedWriter`
+- **Serialization:**  
+  - For complex objects (player stats, levels), use Java's `Serializable` interface
+- **Error Handling:**  
+  - Try-catch blocks for all file operations
+  - User feedback on load/save errors
+
+---
+
+## 6. Data Validation & Error Handling
+
+### 6.1. Validation
+- Validate user input (e.g., player name, settings)
+- Validate file data (check for corruption, missing fields)
+
+### 6.2. Exception Handling
+- Use try-catch for all risky operations (file I/O, parsing)
+- Log errors for debugging
+- Show user-friendly error messages
+
+---
+
+## 7. Game Logic & Mechanics
+
+### 7.1. Core Mechanics
+- Player movement (left/right/jump)
+- Gravity and collision detection
+- Enemies with simple AI (patrol, chase)
+- Collectibles (coins, power-ups)
+- Level progression
+
+### 7.2. Game Loop
+- Use JavaFX `AnimationTimer` for the main game loop
+- Update game state, render, and process input each frame
+
+---
+
+## 8. Testing & Quality Assurance
+
+### 8.1. Unit Testing
+- Test core logic (movement, collision, file handling)
+- Use JUnit for model and utility classes
+
+### 8.2. Integration Testing
+- Test full game flow (start, play, save, load, game over)
+
+### 8.3. User Testing
+- Gather feedback on usability, difficulty, and bugs
+
+---
+
+## 9. Documentation & Submission
+
+### 9.1. Documentation
+- **Project Overview:** Purpose, features, architecture
+- **Class Diagrams:** UML for OOP structure
+- **Screenshots:** Key screens (menu, gameplay, settings)
+- **How to Run:** Build and run instructions (Maven, NetBeans)
+- **OOP/EDP Concepts:** Where and how they are applied
+- **File Handling:** Explanation and code snippets
+
+### 9.2. Demo Video
+- Short video showing gameplay, menus, save/load, and settings
+
+### 9.3. Presentation
+- 5-10 minute presentation covering design, features, and demo
+
+---
+
+## 10. Rubric Alignment Checklist
+
+- [x] At least three OOP classes with inheritance, encapsulation, polymorphism, abstraction
+- [x] JavaFX GUI with FXML, user-friendly and well-structured
+- [x] Event-driven programming for all user and game actions
+- [x] File handling for save/load, with error handling
+- [x] Data validation and exception handling
+- [x] Interactive, engaging user experience
+- [x] Documentation, demo video, and presentation ready
+
+---
+
+## 11. Implementation Timeline (Suggested)
+
+1. **Week 1:** Requirements analysis, class design, FXML wireframes
+2. **Week 2:** Implement core classes, basic game loop, and player movement
+3. **Week 3:** Add enemies, collectibles, and level logic
+4. **Week 4:** Implement file handling, save/load, and settings
+5. **Week 5:** Polish UI, add animations, error handling, and validation
+6. **Week 6:** Testing, documentation, demo video, and presentation prep
+
+---
+
+## Asset Plan Update
+- The game will use a solid color background (no background image required by default).
+- Only a single level will be implemented initially; multi-level support can be added later if needed.
+- All game assets (Mario, block, coin, enemy, flag) will use JavaFX shapes as placeholders until the actual images are provided.
+- Asset directory: src/main/resources/assets/ (for future image assets).
+
+This plan ensures your 2DMARIOGAME project will be robust, maintainable, and fully aligned with your rubric and course requirements. If you need a breakdown of any section (e.g., class diagrams, FXML structure, or code templates), let me know! 

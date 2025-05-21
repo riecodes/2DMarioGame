@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.dmariogame.MainMenuController">
+    <children>
+        <Button fx:id="startButton" text="Start Game" onAction="#handleStartGame" />
+        <Button fx:id="settingsButton" text="Settings" onAction="#handleSettings" />
+        <Button fx:id="exitButton" text="Exit" onAction="#handleExit" />
+    </children>
+</VBox> 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.dmariogame.GameController">
+    <top>
+        <HBox spacing="20.0" alignment="CENTER_LEFT">
+            <children>
+                <Label fx:id="scoreLabel" text="Score: 0" />
+                <Label fx:id="livesLabel" text="Lives: 3" />
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <Pane fx:id="gamePane" prefWidth="600.0" prefHeight="400.0" style="-fx-background-color: #87ceeb;" />
+    </center>
+    <bottom>
+        <Button fx:id="menuButton" text="Back to Menu" onAction="#handleBackToMenu" />
+    </bottom>
+</BorderPane> 

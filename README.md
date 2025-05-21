@@ -51,4 +51,15 @@ Students form a group of two (or more) and develop an interactive system or a ga
 - **Source Code** (all Java files and assets)
 - **Project Documentation** (includes project overview, system/game features, OOP/EDP concepts applied, file-handling implementation, and screenshots)
 - **Demo Video** (short video showcasing how the system/game works)
-- **Presentation** (each group will present their project for 5-10 minutes) 
+- **Presentation** (each group will present their project for 5-10 minutes)
+
+## Asset and Level Plan (Update)
+- The game will use a solid color background (no background image required by default).
+- Only a single level will be implemented for the initial version.
+- All game assets (Mario, block, coin, enemy, flag) will use JavaFX shapes as placeholders until the actual images are provided.
+- Asset directory: src/main/resources/assets/ (for future image assets).
+
+## UI/UX Update
+- The Settings screen will be a simple menu (minimal functionality).
+- The Game Over screen will appear only when the player touches an enemy.
+- Reaching the flag will show a 'You Win' screen instead of Game Over. 
