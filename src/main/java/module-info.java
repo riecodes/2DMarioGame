@@ -1,7 +1,8 @@
 module com.mycompany.dmariogame {
-    requires javafx.controls;
-    requires javafx.fxml;
-
-    opens com.mycompany.dmariogame to javafx.fxml;
-    exports com.mycompany.dmariogame;
+    requires java.desktop;
+    requires java.logging;
+    
+    exports com.mycompany.dmariogame.game;
+    exports com.mycompany.dmariogame.ui;
+    exports com.mycompany.dmariogame.utils;
 }
