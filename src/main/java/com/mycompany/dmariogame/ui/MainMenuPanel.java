@@ -22,7 +22,7 @@ public class MainMenuPanel extends JPanel {
         gbc.insets = new Insets(20, 20, 20, 20);
         gbc.gridx = 0;
 
-        JLabel title = new JLabel("2D Mario Game");
+        JLabel title = new JLabel("Zeus");
         title.setFont(new Font("Arial", Font.BOLD, 36));
         title.setForeground(Color.WHITE);
         gbc.gridy = 0;
