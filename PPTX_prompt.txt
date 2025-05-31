@@ -1,0 +1,42 @@
+Create an 8-slide presentation about ZeusPlatformerGame, a 2D Mario-style Platformer Game developed using Object-Oriented Programming (OOP) and Event-Driven Programming (EDP) concepts in Java. The audience is IT-literate, such as an IT professor.
+
+1. Introduction & Objectives:
+- Introduce "ZeusPlatformerGame": a 2D Mario-style platformer game.
+- State the main objectives: applying OOP and EDP concepts, using Java Swing for GUI, implementing file handling, and creating an engaging user experience.
+
+2. Project Scope & Overview:
+- The project is a 2D platformer where players control a character to jump across platforms, collect coins, avoid enemies, and reach a flag to win.
+- Developed in Java using Swing, with modular code for game logic, UI, audio, and utilities.
+
+3. Core Gameplay & Features:
+- Main menu with options to start or exit the game.
+- Gameplay screen with player, enemies, coins, blocks, and a flag.
+- Sound effects and background music.
+- Game Over and You Win screens.
+- Placeholder graphics using JavaFX shapes.
+
+4. Object-Oriented Programming Concepts:
+- Demonstrates encapsulation, inheritance, polymorphism, and abstraction.
+- Key classes: Player, Enemy, Coin, Block, Flag, Entity (with inheritance and polymorphism).
+- Modular structure separating game logic, UI, audio, and utilities.
+
+5. Event-Driven Programming & User Interaction:
+- Uses event listeners for keyboard controls and menu navigation.
+- Application responds to user inputs for movement, jumping, and menu actions.
+- Interactive feedback through UI and sound.
+
+6. Graphical User Interface (GUI) Design:
+- Built with Java Swing components (JFrame, JPanel, JButton, JLabel, etc.).
+- User-friendly design with clear navigation and multiple screens (Menu, Gameplay, Settings, End screens).
+
+7. File Handling & Data Persistence:
+- Implements file handling for saving/loading high scores or progress (if implemented).
+- Uses FileReader, FileWriter, BufferedReader, BufferedWriter, and/or Object Serialization.
+- Includes data validation and error handling (try-catch blocks).
+
+8. Conclusion & Project Deliverables:
+- Summarize achievements: OOP/EDP integration, GUI, file handling, and user experience.
+- List deliverables: source code, documentation, demo video, and presentation.
+- Highlight educational value and practical skills demonstrated.
+
+Use clear, concise language and visual structure. Each slide should focus on one main idea, using bullet points and diagrams where appropriate. The presentation should be informative and engaging for an IT professor, highlighting both technical implementation and user experience. 
